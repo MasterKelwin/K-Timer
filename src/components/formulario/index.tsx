@@ -6,16 +6,19 @@ class Formulario extends React.Component {
         return(
             <form>
                 <div>
-                    <label htmlFor="tarefa"></label>
-                    <input type="text" id="tarefa" />
+                    <label htmlFor="task"></label>
+                    <input type="text" id="task" required />
                 </div>
                 <div>
-                    <label htmlFor="tempo"></label>
+                    <label htmlFor="time"></label>
                     <input 
                         type="time"
-                        id="tempo"
+                        id="time"
                         min={"00:00:01"}
                         max={"02:30:00"}
+                        step="1"
+                        name="time"
+                        required
                     />
                 </div>
                 <Botao />
