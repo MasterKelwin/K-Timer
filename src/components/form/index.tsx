@@ -1,7 +1,7 @@
 import React from "react";
-import Botao from "../botao"
+import Button from "../button"
 
-class Formulario extends React.Component {
+class Form extends React.Component {
     render() {
         return(
             <form>
@@ -21,10 +21,10 @@ class Formulario extends React.Component {
                         required
                     />
                 </div>
-                <Botao />
+                <Button />
             </form>
         )
     }
 }
 
-export default Formulario;
+export default Form;
