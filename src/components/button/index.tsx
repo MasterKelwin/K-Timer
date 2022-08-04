@@ -1,8 +1,9 @@
 import React from "react";
+import './index.scss'
 
 function Button() {
     return(
-        <button>Botão</button>
+        <button className="button">Adicionar</button>
     )
 }
 

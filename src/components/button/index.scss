@@ -1,0 +1,12 @@
+.button {
+    width: 30vw;
+    margin-top: 1em;
+    height: 2vw;
+    opacity: .7;
+}
+
+.button:hover {
+    opacity: 1;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
