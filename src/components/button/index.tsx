@@ -1,9 +1,9 @@
 import React from "react";
-import './index.scss'
+import style from './button.module.scss'
 
 function Button() {
     return(
-        <button className="button">Adicionar</button>
+        <button className={style.button}>Adicionar</button>
     )
 }
 
