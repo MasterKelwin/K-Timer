@@ -1,0 +1,17 @@
+.form {
+    height: 100%;
+}
+
+.input {
+    font-family: 'Lato', sans-serif;
+}
+
+.divTask, .divTime {
+    display: flex;
+    flex-direction: column;
+}
+
+.divTask {
+    margin-bottom: 1em;
+}
+
