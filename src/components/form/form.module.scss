@@ -1,9 +1,8 @@
 .form {
     height: 100%;
-}
-
-.input {
-    font-family: 'Lato', sans-serif;
+    width: 65%;   
+    background-color: rgb(180, 180, 180);
+    padding: 3em;
 }
 
 .divTask, .divTime {
@@ -12,6 +11,39 @@
 }
 
 .divTask {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
+
+.label {
+    font-weight: bold;
+    font-size: 2.6em;
+    margin-bottom: .2em;
+}
+
+.inputTask {
+    font-family: 'Lato', sans-serif;
+    font-size: 2.4em;
+    border: none;
+    border-radius: 5px;
+    width: 60vw;
+    max-height: 55px;
+    width: 100%;
+}
+
+.inputTime {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.4em;
+    height: 2em;
+    border: none;
+    border-radius: 5px;
+    width: 60vw;
+    max-height: 55px;
+    width: 100%;
+}
+
+.input:focus {
+    outline: 3px solid #000;
+  }
+
+
 

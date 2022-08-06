@@ -1,3 +1,5 @@
+//  FORM
+
 import React from 'react';
 import Button from '../button';
 import style from './form.module.scss';
@@ -7,17 +9,17 @@ class Form extends React.Component {
     return(
       <form className={style.form}>
         <div className={style.divTask}>
-          <label htmlFor="task">Insira sua tarefa</label>
+          <label className={style.label} htmlFor="task">Insira sua tarefa</label>
           <input 
-            className={style.input}
+            className={style.inputTask}
             type="text" 
             id="task" 
             required />
         </div>
         <div className={style.divTime}>
-          <label htmlFor="time">Insira o tempo desejado</label>
+          <label className={style.label} htmlFor="time">Insira o tempo desejado</label>
           <input 
-              className={style.input}
+              className={style.inputTime}
               type="time"
               id="time"
               min={"00:00:01"}
