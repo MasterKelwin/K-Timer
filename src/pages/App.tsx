@@ -8,8 +8,9 @@ function App() {
     <main className={style.app}>
       <div className={style.tasks}>
         <Form />
-        <List />
+
       </div>
+      <List />
     </main>
   );
 }
