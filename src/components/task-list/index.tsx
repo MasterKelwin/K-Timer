@@ -11,7 +11,8 @@ function List () {
         tarefa: "React",
         tempo: "02:00:00",
         id: "react"
-    }]
+    },
+]
     return(
         <section className={style.section}>
             <h2 className={style.titulo}>Estudos do dia</h2>

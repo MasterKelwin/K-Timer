@@ -19,16 +19,13 @@
 }
 
 .item {
-    margin: 0 1em 1em 0em;
+    margin: 0 1em .5em 0em;
     background-color: #fff;
     padding: .2em;
     border-radius: 6px;
 }
 
 .nomeItem {
-
-}
-
-.tempoItem {
-
+    margin-bottom: .1em;
+    font-weight: bold;
 }
