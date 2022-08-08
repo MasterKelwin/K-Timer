@@ -1,9 +1,9 @@
 import React from "react";
 import style from './button.module.scss'
 
-function Button() {
+function Button(props: any) {
     return(
-        <button className={style.button}>Adicionar</button>
+        <button className={style.button}>{props.children}</button>
     )
 }
 
