@@ -1,7 +1,6 @@
 .form {
-    width: 65vw;   
     background-color: rgb(180, 180, 180);
-    padding: 2em;
+    padding: 0.5em 1em 0.5em 1em;
     border-radius: 30px;
 }
 
@@ -16,8 +15,9 @@
 
 .label {
     font-weight: bold;
-    font-size: 2.2em;
+    font-size: 1.8em;
     margin-bottom: .2em;
+    text-align: center;
 }
 
 .inputTask {
@@ -25,9 +25,6 @@
     font-size: 2.4em;
     border: none;
     border-radius: 8px;
-    width: 60vw;
-    max-height: 55px;
-    width: 100%;
 }
 
 .inputTime {
@@ -36,13 +33,10 @@
     height: 2em;
     border: none;
     border-radius: 5px;
-    width: 60vw;
-    max-height: 55px;
-    width: 100%;
 }
 
-.input:focus {
-    outline: 3px solid #000;
+input:focus {
+    outline: 2px solid rgb(119, 119, 119);
   }
 
 
