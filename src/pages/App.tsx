@@ -4,7 +4,7 @@ import List from '../components/task-list';
 import Cron from '../components/cronometer';
 import style from './App.module.scss';
 
-function App() {
+export default function App() {
   return (
     <main className={style.app}>
       <div className={style.tasks}>
@@ -16,6 +16,9 @@ function App() {
   );
 }
 
-export default App;
 
 
+// componetizar Item da Lista
+// dentro de tarefa.map, tem o componente item
+// {...item}
+// manter o key na LISTA

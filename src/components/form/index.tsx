@@ -1,11 +1,8 @@
 //  FORM
-
-import React from 'react';
 import Button from '../button';
 import style from './form.module.scss';
 
-class Form extends React.Component {
-  render() {
+export default function Form () {
     return(
       <form className={style.form}>
         <div className={style.divTask}>
@@ -32,7 +29,4 @@ class Form extends React.Component {
         <Button>Adicionar</Button>
       </form>
     )
-  }
 }
-
-export default Form;
