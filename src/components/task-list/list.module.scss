@@ -20,9 +20,16 @@
 
 .item {
     margin: 0 1em .5em 0em;
-    background-color: #fff;
+    background-color: #EBEBEB;
     padding: .2em;
     border-radius: 6px;
+    transition: .8s;
+}
+
+.item:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: rgb(44, 44, 44);
 }
 
 .nomeItem {

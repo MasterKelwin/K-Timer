@@ -1,7 +1,11 @@
-import style from '../cronometer/cronometer.module.scss'
+import style from './cronometer.module.scss'
+import Timer from './timer'
 
 export default function Cron () {
     return(
-        <p>Espaço para cronômetro</p>
+        <section className={style.cronometer}>
+            <h2 className={style.title}>Escolha sua tarefa e comece estudar</h2>
+            <Timer />
+        </section>
     )
 }
