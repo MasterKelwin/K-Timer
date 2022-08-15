@@ -18,7 +18,5 @@ export default function App() {
 
 
 
-// componetizar Item da Lista
-// dentro de tarefa.map, tem o componente item
-// {...item}
-// manter o key na LISTA
+
+
