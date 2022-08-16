@@ -1,6 +1,7 @@
 import Item from '../task-list/item';
 import style from './list.module.scss';
 import { ITask } from '../../types/ITask'
+import { v4 as uuidv4 } from 'uuid';
 
 function List ({ tasks } : { tasks: ITask[]}) {
     return(
@@ -9,8 +10,7 @@ function List ({ tasks } : { tasks: ITask[]}) {
             <ul className={style.lista}>
                 {tasks.map((item, index) => (
                     <Item 
-                        task={item.task} time={item.time} key={index}
-                        //{...item}
+                        task={item.task} time={item.time} key={index} completed={false} selected={false} id={uuidv4()}                       
                         />
                 ))}
             </ul>

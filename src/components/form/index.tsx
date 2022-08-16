@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Button from '../button';
 import style from './form.module.scss';
 import { ITask } from '../../types/ITask'
+import { v4 as uuidv4 } from 'uuid';
 
 interface Props {
     setTasks: React.Dispatch<React.SetStateAction<ITask[]>>
@@ -15,7 +16,11 @@ export default function Form ({setTasks}: Props) {
         event.preventDefault();
         setTasks(oldProps => 
         [...oldProps,
-            {task, time}
+            {task,
+            time,
+            completed: false,
+            selected: false,
+            id: uuidv4()}
         ]);
         setTask("");
         setTime("00:00:00");

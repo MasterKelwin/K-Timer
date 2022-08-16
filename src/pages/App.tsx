@@ -18,6 +18,8 @@ export default function App() {
   );
 }
 
+//selecionado e completado
+//npm i uuid
 
 
 
