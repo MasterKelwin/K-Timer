@@ -10,7 +10,7 @@ export default function Form () {
             tempo: "00:00:00"
         })
 
-    function addTask(event: React.FormEvent) {
+    function addTask(event: React.FormEvent<HTMLElement>) {
         event.preventDefault();
         console.log(task);
     }
@@ -42,7 +42,7 @@ export default function Form () {
               required
           />
         </div>
-        <Button>Adicionar</Button>
+        <Button type="submit">Adicionar</Button>
       </form>
     );
     

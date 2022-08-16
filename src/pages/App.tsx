@@ -17,7 +17,11 @@ export default function App() {
 }
 
 
-// criar função de adicionar tarefa com evento de parametro
+// lista no APP
+//criar interfaces
+// pasta types
+// TAREFAS em lista
+// SETTAREFAS em form
 
 
 
