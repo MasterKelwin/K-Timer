@@ -2,18 +2,23 @@
 import React, { useState } from 'react';
 import Button from '../button';
 import style from './form.module.scss';
+import { ITask } from '../../types/ITask'
 
-export default function Form () {
-    const [task, setTask] = useState(
-        {
-            tarefa: "",
-            tempo: "00:00:00"
-        })
+interface Props {
+    setTasks: React.Dispatch<React.SetStateAction<ITask[]>>
+}
+
+export default function Form ({setTasks}: Props) {
+    const [task, setTask] = useState("");
+    const [time, setTime] = useState("00:00:00");
 
     function addTask(event: React.FormEvent<HTMLElement>) {
         event.preventDefault();
-        console.log(task);
+        setTasks((oldTasks) => [...oldTasks, {tarefa, tempo}]);
     }
+
+    setTask("");
+    setTime("");
 
     return(
       <form className={style.form} onSubmit={addTask}>
@@ -23,8 +28,8 @@ export default function Form () {
             className={style.inputTask}
             type="text" 
             id="task" 
-            value={task.tarefa}
-            onChange={evento => setTask({...task, tarefa: evento.target.value})}
+            value={task}
+            onChange={evento => setTask(evento.target.value)}
             required />
         </div>
         <div className={style.divTime}>
@@ -33,12 +38,12 @@ export default function Form () {
               className={style.inputTime}
               type="time"
               id="time"
-              value={task.tempo}
+              value={time}
               min={"00:00:01"}
               max={"02:30:00"}
               step="1"
               name="time"
-              onChange={evento => setTask({...task, tempo: evento.target.value})}
+              onChange={evento => setTime(evento.target.value)}
               required
           />
         </div>
