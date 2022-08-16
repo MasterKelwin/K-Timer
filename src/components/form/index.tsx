@@ -3,7 +3,6 @@ import Button from '../button';
 import style from './form.module.scss';
 
 export default function Form () {
-
     return(
       <form className={style.form}>
         <div className={style.divTask}>
