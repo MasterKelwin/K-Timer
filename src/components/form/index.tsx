@@ -11,15 +11,15 @@ interface Props {
 export default function Form ({setTasks}: Props) {
     const [task, setTask] = useState("");
     const [time, setTime] = useState("00:00:00");
-
-    function addTask(event: React.FormEvent<HTMLElement>) {
+    function addTask(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
-        setTasks((oldTasks) => [...oldTasks, {tarefa, tempo}]);
+        setTasks(tarefasAntigas => 
+        [...tarefasAntigas,
+            {task, time}
+        ]);
     }
-
-    setTask("");
-    setTime("");
-
+    //setTime("");
+    //setTask("00:00");
     return(
       <form className={style.form} onSubmit={addTask}>
         <div className={style.divTask}>
@@ -49,8 +49,4 @@ export default function Form ({setTasks}: Props) {
         </div>
         <Button type="submit">Adicionar</Button>
       </form>
-    );
-    
-}
-
-
+    )};

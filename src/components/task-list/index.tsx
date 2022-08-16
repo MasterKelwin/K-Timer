@@ -9,7 +9,7 @@ function List ({ tasks } : { tasks: ITask[]}) {
             <ul className={style.lista}>
                 {tasks.map((item, index) => (
                     <Item 
-                        tarefa={''} tempo={''} key={index}
+                        tarefa={item.task} tempo={item.time} key={index}
                         {...item}                    />
                 ))}
             </ul>
