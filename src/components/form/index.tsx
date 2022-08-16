@@ -13,13 +13,14 @@ export default function Form ({setTasks}: Props) {
     const [time, setTime] = useState("00:00:00");
     function addTask(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
-        setTasks(tarefasAntigas => 
-        [...tarefasAntigas,
+        setTasks(oldProps => 
+        [...oldProps,
             {task, time}
         ]);
+        setTask("");
+        setTime("00:00:00");
     }
-    //setTime("");
-    //setTask("00:00");
+
     return(
       <form className={style.form} onSubmit={addTask}>
         <div className={style.divTask}>

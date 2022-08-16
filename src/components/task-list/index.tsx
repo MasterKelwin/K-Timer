@@ -9,8 +9,9 @@ function List ({ tasks } : { tasks: ITask[]}) {
             <ul className={style.lista}>
                 {tasks.map((item, index) => (
                     <Item 
-                        tarefa={item.task} tempo={item.time} key={index}
-                        {...item}                    />
+                        task={item.task} time={item.time} key={index}
+                        //{...item}
+                        />
                 ))}
             </ul>
         </section>

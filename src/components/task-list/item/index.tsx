@@ -1,10 +1,10 @@
 import style from '../../task-list/list.module.scss';
 
-export default function Item({tarefa, tempo}: {tarefa: string, tempo: string}) {
+export default function Item({task, time}: {task: string, time: string}) {
     return (
         <li className={style.item}>
-            <h3 className={style.nomeItem}>{tarefa}</h3>
-            <span className={style.tempoItem}>{tempo}</span>
+            <h3 className={style.nomeItem}>{task}</h3>
+            <span className={style.tempoItem}>{time}</span>
         </li>
     )
 }
