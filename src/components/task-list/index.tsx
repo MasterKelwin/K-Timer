@@ -15,13 +15,9 @@ function List ({ tasks, select } : Props) {
             <ul className={style.lista}>
                 {tasks.map((item, index) => (
                     <Item 
-                        task={item.task}
-                        time={item.time}
-                        id={uuidv4()}    
-                        completed={false}
-                        selected={false}
                         key={item.id}                        
-                        select={select}                   
+                        select={select}
+                        {...item}                   
                         />
                 ))}
             </ul>
