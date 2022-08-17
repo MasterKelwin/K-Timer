@@ -7,22 +7,34 @@ import { ITask } from '../types/ITask';
 
 export default function App() {
     const [tasks, setTasks] = useState<ITask[]>([]);
+    const [selected, setSelected] = useState<ITask>();
+
+    function select(taskSelected: ITask) {
+      setSelected(taskSelected);
+      setTasks(oldTasks => oldTasks.map(task => ({
+        ...task,
+        selected: task.id === taskSelected.id ? true : false
+      })))
+      console.log(taskSelected);
+    }
   return (
     <main className={style.app}>
       <div className={style.tasks}>
         <Form setTasks={setTasks}/>
         <Cron />
       </div>
-      <List tasks={tasks}/>
+      <List tasks={tasks} select={select}/>
     </main>
   );
 }
 
-//selecionado e completado
-//npm i uuid
 
 
 
 
 
 
+
+//estado selecionado
+//funcao seleciona em props
+//extender props
