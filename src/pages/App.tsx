@@ -38,4 +38,5 @@ export default function App() {
 //useEffect(1, 2)  1- função 2- array de dependencias
 
 
+
 //ternario, useState, useEffect
