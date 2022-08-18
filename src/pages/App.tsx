@@ -4,7 +4,7 @@ import List from '../components/task-list';
 import Cron from '../components/cronometer';
 import style from './App.module.scss';
 import { ITask } from '../types/ITask';
-import { timeInSeconds } from '../common/utils/date';
+import { timeInSeconds } from '../common/utils/time';
 
 export default function App() {
     const [tasks, setTasks] = useState<ITask[]>([]);
@@ -35,5 +35,7 @@ export default function App() {
 
 
 
+//useEffect(1, 2)  1- função 2- array de dependencias
 
- 
+
+//ternario, useState, useEffect
