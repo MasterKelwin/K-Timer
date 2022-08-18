@@ -10,8 +10,8 @@ interface Props {
 }
 
 export default function Form ({setTasks}: Props) {
-    const [task, setTask] = useState("");
-    const [time, setTime] = useState("00:00:00");
+    const [task, setTask] = useState(""); //inputs states
+    const [time, setTime] = useState("00:00:00"); //inputs states
     function addTask(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
         setTasks(oldProps => 
@@ -22,8 +22,9 @@ export default function Form ({setTasks}: Props) {
             selected: false,
             id: uuidv4()}
         ]);
-        setTask("");
-        setTime("00:00:00");
+
+        setTask("");  //flush form
+        setTime("00:00:00"); //flush form
     }
 
     return(

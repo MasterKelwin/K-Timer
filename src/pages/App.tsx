@@ -4,6 +4,7 @@ import List from '../components/task-list';
 import Cron from '../components/cronometer';
 import style from './App.module.scss';
 import { ITask } from '../types/ITask';
+import { timeInSeconds } from '../common/utils/date';
 
 export default function App() {
     const [tasks, setTasks] = useState<ITask[]>([]);
@@ -21,7 +22,7 @@ export default function App() {
     <main className={style.app}>
       <div className={style.tasks}>
         <Form setTasks={setTasks}/>
-        <Cron />
+        <Cron selected={selected}/>
       </div>
       <List tasks={tasks} select={select}/>
     </main>
@@ -35,6 +36,4 @@ export default function App() {
 
 
 
-//estado selecionado
-//funcao seleciona em props
-//extender props
+ 
