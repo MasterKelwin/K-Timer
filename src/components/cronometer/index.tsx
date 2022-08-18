@@ -17,11 +17,22 @@ export default function Cron ({ selected } : Props ) {
         }
     },[selected]);
 
+    function regressive(counter: number = 0) {
+        setTimeout(() => {
+            if(counter > 0) {
+                setTime(counter--);
+                return regressive(counter--)
+            } else{
+                //finalizarTarefa
+            }
+        }, 1000);
+    }
+
     return(
         <section className={style.cronometer}>
             <h2 className={style.title}>Escolha sua tarefa e comece estudar</h2>
             <Timer time={time}/>
-            <Button>Começar</Button>
+            <Button onClick={() => regressive(time)}>Começar</Button>
         </section>
     );
 }

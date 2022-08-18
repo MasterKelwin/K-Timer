@@ -5,7 +5,6 @@ interface Props {
 }
 
 export default function Timer({ time = 0 }: Props) {
-    console.log(time);
     const secondsForHour = Math.floor(time / 3600);
     const secondsForMinutes = (Math.floor(time / 60)) - (secondsForHour*60);
     const seconds = time % 60;
