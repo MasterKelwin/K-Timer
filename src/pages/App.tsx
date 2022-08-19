@@ -54,4 +54,15 @@ export default function App() {
 //ternario, useState, useEffect
 //interfaces ou types, quando e porque utilizar
 //styled components e sass, qual e porque usar?
-//
+
+
+
+/*
+to add:
+1-A way to remove a task after complet
+2-fixes in cronometer:
+ a: the number on display doesnt update to 00:00:00
+ b: a solution to stop or add a new task on cronometer, even before the task is done
+3- add a readme.txt about the project
+4- list of completed tasks
+*/
