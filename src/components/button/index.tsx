@@ -6,7 +6,7 @@ import React from 'react';
 interface Props {
     type?: "button" | "submit" | "reset" | undefined,
     onClick?: () => void,
-    children?: React.ReactNode
+    children: React.ReactNode
   }
 
 export default function Button({ onClick, type, children }: Props) {

@@ -6,10 +6,11 @@ import { useEffect, useState } from 'react'
 import Button from '../button'
 
 interface Props {
-    selected: ITask | undefined
+    selected: ITask | undefined,
+    taskOver: () => void
   }
   
-export default function Cron ({ selected } : Props ) {
+export default function Cron ({ selected, taskOver } : Props ) {
     const [time, setTime] = useState<number>();
     useEffect(() => {
         if(selected?.time) {
@@ -23,7 +24,7 @@ export default function Cron ({ selected } : Props ) {
                 setTime(counter--);
                 return regressive(counter--)
             } else{
-                //finalizarTarefa
+                taskOver();
             }
         }, 1000);
     }
