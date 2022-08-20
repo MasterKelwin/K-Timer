@@ -19,7 +19,6 @@ export default function App() {
         })))}
 
     if(taskSelected.completed === true) {
-        setSelected(taskSelected);
         setTasks(oldTasks => oldTasks.map(task => ({
           ...task,
           removed: task.id === taskSelected.id ? true : false
@@ -78,7 +77,6 @@ to add:
 2-fixes in cronometer:
  a: the number on display doesnt update to 00:00:00
  b: a solution to stop or add a new task on cronometer, even before the task is done
- c: on removal, task go back to cronometer, maybe I gonna create a state for removals
 3- add a readme.txt about the project
 4- list of completed tasks
 5- make it responsive
