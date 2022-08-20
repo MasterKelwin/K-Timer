@@ -8,6 +8,7 @@ import { ITask } from '../types/ITask';
 export default function App() {
     const [tasks, setTasks] = useState<ITask[]>([]);
     const [selected, setSelected] = useState<ITask>();
+    const [completes, setCompletes] = useState<ITask>();
 
     function select(taskSelected: ITask) {
       
@@ -19,6 +20,7 @@ export default function App() {
         })))}
 
     if(taskSelected.completed === true) {
+        setCompletes(taskSelected);
         setTasks(oldTasks => oldTasks.map(task => ({
           ...task,
           removed: task.id === taskSelected.id ? true : false
