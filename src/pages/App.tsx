@@ -10,11 +10,25 @@ export default function App() {
     const [selected, setSelected] = useState<ITask>();
 
     function select(taskSelected: ITask) {
-      setSelected(taskSelected);
-      setTasks(oldTasks => oldTasks.map(task => ({
-        ...task,
-        selected: task.id === taskSelected.id ? true : false
-      })))
+      
+    if(taskSelected.completed === false) {
+        setSelected(taskSelected);
+        setTasks(oldTasks => oldTasks.map(task => ({
+            ...task,
+            selected: task.id === taskSelected.id ? true : false
+        })))}
+
+    if(taskSelected.completed === true) {
+        setSelected(taskSelected);
+        setTasks(oldTasks => oldTasks.map(task => ({
+          ...task,
+          removed: task.id === taskSelected.id ? true : false
+        })))}
+
+      setTasks(oldTasks => oldTasks.filter(task => {
+        return task.removed !== true;
+      }));
+    
       console.log(taskSelected);
     }
 
@@ -33,6 +47,7 @@ export default function App() {
         }));
       }
     }
+    
   return (
     <main className={style.app}>
       <div className={style.tasks}>
@@ -59,10 +74,12 @@ export default function App() {
 
 /*
 to add:
-1-A way to remove a task after complet
+1-A way to record the tasks completeds after removal
 2-fixes in cronometer:
  a: the number on display doesnt update to 00:00:00
  b: a solution to stop or add a new task on cronometer, even before the task is done
+ c: on removal, task go back to cronometer, maybe I gonna create a state for removals
 3- add a readme.txt about the project
 4- list of completed tasks
+5- make it responsive
 */

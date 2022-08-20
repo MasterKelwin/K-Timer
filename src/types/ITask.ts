@@ -3,5 +3,6 @@ export interface ITask {
     time: string,
     completed: boolean,
     selected: boolean,
-    id: string
+    id: string,
+    removed: boolean
 }

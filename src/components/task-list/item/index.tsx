@@ -11,16 +11,20 @@ export default function Item({
                         completed,
                         selected,
                         id,
+                        removed,
                         select
                             }: Props) {
     return (
-        <li className={`${style.item} ${selected ? style.itemSelected : ''} ${completed ? style.itemCompleted : ''}`}
+        <li className=
+        {`${style.item} ${selected ? style.itemSelected : ''}
+          ${completed ? style.itemCompleted : ''}`}
             onClick={() => select({
                 task,
                 time,
                 completed,
                 selected,
-                id
+                id,
+                removed
             })}>
             <h3 className={style.nomeItem}>{task}</h3>
             <span className={style.tempoItem}>{time}</span>

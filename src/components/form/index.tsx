@@ -20,7 +20,8 @@ export default function Form ({setTasks}: Props) {
             time,
             completed: false,
             selected: false,
-            id: uuidv4()}
+            id: uuidv4(),
+            removed: false}
         ]);
 
         setTask("");  //flush form
