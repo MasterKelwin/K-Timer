@@ -77,11 +77,10 @@ export default function App() {
 
 /*
 to add:
-1-Create a component to show all tasks completeds
-2-fixes in cronometer:
+1-fixes in cronometer:
  a: the number on display doesnt update to 00:00:00
  b: a solution to stop or add a new task on cronometer, even before the task is done
-3- add a readme.txt about the project
-4- make it responsive
-5- change flexbox use to grid, because seems to be more reasonable
+2- add a readme.txt about the project
+3- make it responsive
+4- change flexbox use to grid, because seems to be more reasonable
 */
