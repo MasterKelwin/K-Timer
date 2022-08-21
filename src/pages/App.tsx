@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import Form from '../components/form';
 import List from '../components/task-list';
 import Cron from '../components/cronometer';
+import CompletedTasks from '../components/completedTasks';
 import style from './App.module.scss';
 import { ITask } from '../types/ITask';
 
 export default function App() {
     const [tasks, setTasks] = useState<ITask[]>([]);
     const [selected, setSelected] = useState<ITask>();
-    const [completes, setCompletes] = useState<ITask>();
+    const [complets, setComplets] = useState<ITask[]>([]);
 
     function select(taskSelected: ITask) {
       
@@ -20,7 +21,7 @@ export default function App() {
         })))}
 
     if(taskSelected.completed === true) {
-        setCompletes(taskSelected);
+        setComplets(oldTasks => [...oldTasks, taskSelected]);
         setTasks(oldTasks => oldTasks.map(task => ({
           ...task,
           removed: task.id === taskSelected.id ? true : false
@@ -54,6 +55,7 @@ export default function App() {
       <div className={style.tasks}>
         <Form setTasks={setTasks}/>
         <Cron selected={selected} taskOver={taskOver}/>
+        <CompletedTasks complets={complets}/>
       </div>
       <List tasks={tasks} select={select}/>
     </main>
@@ -81,4 +83,5 @@ to add:
  b: a solution to stop or add a new task on cronometer, even before the task is done
 3- add a readme.txt about the project
 4- make it responsive
+5- change flexbox use to grid, because seems to be more reasonable
 */

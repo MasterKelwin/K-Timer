@@ -1,7 +1,6 @@
 import Item from '../task-list/item';
 import style from './list.module.scss';
 import { ITask } from '../../types/ITask'
-import { v4 as uuidv4 } from 'uuid';
 
 interface Props {
     tasks: ITask[],
@@ -13,7 +12,7 @@ function List ({ tasks, select } : Props) {
         <section className={style.section}>
             <h2 className={style.titulo}>Estudos do dia</h2>
             <ul className={style.lista}>
-                {tasks.map((item, index) => (
+                {tasks.map(item => (
                     <Item 
                         key={item.id}                        
                         select={select}

@@ -1,0 +1,53 @@
+.div {
+    background-color: #B4B4B4;
+    margin-top: 1em;
+    padding: 1em 1em;
+    border-radius: 30px;
+    height: 50em;
+    max-height: calc(100% - 3em - 40% - 31% - 1em);
+}
+
+.title {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.trace {
+    background-color: #000;
+    width: 100%;
+    height: 2px;
+    margin-bottom: .2em;
+    border-radius: 2px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    height: 100%;
+}
+
+.item {
+    background-color: #fff;
+    height: 2em;
+    width: 8em;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .25em .5em .25em 0;
+}
+
+.item:hover {
+    background-color: #adffc2;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.name {
+    font-weight: bold;
+    color: green;
+}

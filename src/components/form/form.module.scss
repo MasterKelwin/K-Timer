@@ -2,6 +2,7 @@
     background-color: rgb(180, 180, 180);
     padding: 0.5em 1em 0.5em 1em;
     border-radius: 30px;
+    height: 27%;
 }
 
 .divTask, .divTime {
@@ -36,7 +37,7 @@
 }
 
 input:focus {
-    outline: 2px solid rgb(119, 119, 119);
+    outline: 3px solid rgb(119, 119, 119);
   }
 
 
