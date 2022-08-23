@@ -7,27 +7,31 @@ import Button from '../button'
 
 interface Props {
     selected: ITask | undefined,
-    taskOver: () => void
+    taskOver: () => void,
+    stop: () => void
   }
   
-export default function Cron ({ selected, taskOver } : Props ) {
+export default function Cron ({ selected, taskOver, stop } : Props ) {
     const [time, setTime] = useState<number>();
-
     useEffect(() => {
         if(selected?.time) {
             setTime(timeInSeconds(selected.time));
         }
     },[selected]);
 
+    let timeout: ReturnType<typeof setTimeout> = setTimeout(() => '', 1000);
+
     function regressive(counter: number = 0) {
         setTimeout(() => {
             if(counter >= 0) {
                 setTime(counter--);
                 return regressive(counter--)
+
             } else{
                 taskOver();
             }
         }, 1000);
+
     }
 
     return(

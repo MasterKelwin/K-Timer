@@ -3,11 +3,16 @@
     padding: 0.5em 1em 0.5em 1em;
     border-radius: 30px;
     height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .divTask, .divTime {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .divTask {
