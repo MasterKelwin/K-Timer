@@ -2,7 +2,7 @@
     background-color: rgb(180, 180, 180);
     padding: 0.5em 1em 0.5em 1em;
     border-radius: 30px;
-    height: 27%;
+    height: 30%;
 }
 
 .divTask, .divTime {
@@ -11,21 +11,26 @@
 }
 
 .divTask {
-    margin-bottom: 1.4em;
+    margin-bottom: 1em;
+}
+
+.divTime {
+    margin-bottom: 1em;
 }
 
 .label {
     font-weight: bold;
-    font-size: 1.8em;
+    font-size: 1.6em;
     margin-bottom: .2em;
     text-align: center;
 }
 
 .inputTask {
     font-family: 'Lato', sans-serif;
-    font-size: 2.4em;
+    font-size: 1.5em;
     border: none;
     border-radius: 8px;
+    height: 2em;
 }
 
 .inputTime {
