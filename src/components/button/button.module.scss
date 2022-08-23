@@ -1,6 +1,5 @@
 .button {
     width: 100%;
-    margin: 0 1em;
     height: 3vh;
     opacity: .85;
     border: none;
@@ -13,5 +12,13 @@
     opacity: 1;
     transition: .5s ease-in-out;
     cursor: pointer;
+}
+
+@media screen and (max-width: 738px){
+    .button {
+        font-size: 1em;
+        height: 1.4em;
+    }
+
 }
 

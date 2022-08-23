@@ -1,7 +1,7 @@
 .div {
     background-color: #B4B4B4;
     margin-top: 1em;
-    padding: 1em 1em;
+    padding: 1em;
     border-radius: 30px;
     height: 30%;
 }
@@ -49,4 +49,24 @@
 .name {
     font-weight: bold;
     color: green;
+}
+
+@media screen and (max-width: 738px){
+    .div {
+        margin-top: .5em;
+        border-radius: 15px;
+        padding: .5em;
+        height: 100%;
+    }
+
+    .title {
+        font-size: 1.5em;
+    }
+
+    .item {
+        height: 2em;
+        width: 100%;
+        border-radius: 8px;
+        margin: .25em .5em 0 0;
+    }
 }

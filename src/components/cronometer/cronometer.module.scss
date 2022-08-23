@@ -1,7 +1,7 @@
 .cronometer {
     background-color: #B4B4B4;
     margin-top: 1em;
-    padding: 1em 1em;
+    padding: 1em;
     border-radius: 30px;
     height: 40%;
 }
@@ -10,4 +10,17 @@
     font-size: 1.8em;
     font-weight: bold;
     text-align: center;
+}
+
+@media screen and (max-width: 738px){
+    .cronometer {
+        margin-top: .5em;
+        padding: .5em;
+        height: 26%;
+        border-radius: 15px;
+    }
+
+    .title {
+        font-size: 1.2em;
+    }
 }

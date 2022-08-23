@@ -13,13 +13,6 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-}
-
-.divTask {
-    margin-bottom: 1em;
-}
-
-.divTime {
     margin-bottom: 1em;
 }
 
@@ -50,5 +43,23 @@ input:focus {
     outline: 3px solid rgb(119, 119, 119);
   }
 
+  @media screen and (max-width: 738px){
+    .form {
+        border-radius: 15px;
+        height: 20%;
+    }
+    
+    .label {
+        font-size: 1.2em;
+    }
+
+    .inputTask, .inputTime {
+        font-size: 1em;
+        height: 1em;
+        border-radius: 2px;
+    }
+    
+
+}
 
 

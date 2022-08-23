@@ -1,3 +1,9 @@
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .number  {
     font-size: 15em;
     background-color: #fefefe;
@@ -9,8 +15,16 @@
     font-size: 15em;
 }
 
-.timer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+
+@media screen and (max-width: 738px){
+    .number {
+        font-size: 5em;
+        border-radius: 9px;
+    }
+
+    .points {
+        font-size: 5em;
+    }
+
 }
