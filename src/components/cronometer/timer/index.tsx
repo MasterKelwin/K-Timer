@@ -28,3 +28,4 @@ export default function Timer({ time = 0 }: Props) {
         </section>
     )
 }
+

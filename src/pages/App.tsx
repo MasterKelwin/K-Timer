@@ -20,32 +20,26 @@ export default function App() {
             selected: task.id === taskSelected.id ? true : false
         })))}
 
-    if(taskSelected.completed === true) {
-        setComplets(oldTasks => [...oldTasks, taskSelected]);
-        setTasks(oldTasks => oldTasks.map(task => ({
-          ...task,
-          removed: task.id === taskSelected.id ? true : false
-        })))}
-
-      setTasks(oldTasks => oldTasks.filter(task => {
-        return task.removed !== true;
-      }));
-    
       console.log(taskSelected);
     }
 
     function taskOver() {
       if(selected) {
-        setSelected(undefined);
+        setComplets(oldTasks => [...oldTasks, selected]);
         setTasks(oldTasks => oldTasks.map(task => {
           if(task.id === selected.id) {
             return {
               ...task,
               selected: false,
-              completed: true
+              completed: true,
+              removed: true
             }
           }
           return task;
+        }));
+        setSelected(undefined);
+        setTasks(oldTasks => oldTasks.filter(task => {
+          return task.removed !== true;
         }));
       }
     }
@@ -78,8 +72,7 @@ export default function App() {
 /*
 to add:
 1-fixes in cronometer:
- a: the number on display doesnt update to 00:00:00
- b: a solution to stop or add a new task on cronometer, even before the task is done
+ a: a solution to stop or add a new task on cronometer, even before the task is done
 2- add a readme.txt about the project
 3- make it responsive
 4- change flexbox use to grid, because seems to be more reasonable

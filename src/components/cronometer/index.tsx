@@ -12,6 +12,7 @@ interface Props {
   
 export default function Cron ({ selected, taskOver } : Props ) {
     const [time, setTime] = useState<number>();
+
     useEffect(() => {
         if(selected?.time) {
             setTime(timeInSeconds(selected.time));
@@ -20,7 +21,7 @@ export default function Cron ({ selected, taskOver } : Props ) {
 
     function regressive(counter: number = 0) {
         setTimeout(() => {
-            if(counter > 0) {
+            if(counter >= 0) {
                 setTime(counter--);
                 return regressive(counter--)
             } else{
