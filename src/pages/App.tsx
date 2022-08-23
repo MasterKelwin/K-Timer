@@ -23,6 +23,19 @@ export default function App() {
       console.log(taskSelected);
     }
 
+    function delay(seconds: number){
+      return new Promise(function(_function){
+          setTimeout(_function, seconds * 1000);
+      });
+    }
+    
+    async function removeTask(){  
+      await delay(1);
+      setTasks(oldTasks => oldTasks.filter(task => {
+        return task.removed !== true;
+      }));
+    }
+
     function taskOver() {
       if(selected) {
         setComplets(oldTasks => [...oldTasks, selected]);
@@ -38,9 +51,7 @@ export default function App() {
           return task;
         }));
         setSelected(undefined);
-        setTasks(oldTasks => oldTasks.filter(task => {
-          return task.removed !== true;
-        }));
+        removeTask();
       }
     }
     
@@ -55,6 +66,8 @@ export default function App() {
     </main>
   );
 }
+
+
 
 
 
