@@ -101,9 +101,6 @@ export default function App() {
 
 /*
 to add:
-1-fixes in cronometer:
- a: a solution to stop or add a new task on cronometer, even before the task is done
 2- add a readme.txt about the project
 3- make it responsive
-4- change flexbox use to grid, because seems to be more reasonable
 */
