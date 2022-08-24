@@ -85,22 +85,18 @@ export default function App() {
 }
 
 
+function ListaDeRepositorios() {
+  useEffect(() => {
+    async function carregaRepositorios () {
+      const resposta = await fetch('https://api.github.com/users/julio-cesar96/repos');
+      const repositorios = await resposta.json();
+ return repositorios;
+    }
+    carregaRepositorios();
+  }, [])};
 
 
 
 
 
 
-
-//useEffect(1, 2)  1- função 2- array de dependencias
-//ternario, useState, useEffect
-//interfaces ou types, quando e porque utilizar
-//styled components e sass, qual e porque usar?
-
-
-
-/*
-to add:
-2- add a readme.txt about the project
-3- make it responsive
-*/
