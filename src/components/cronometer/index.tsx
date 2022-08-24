@@ -19,8 +19,6 @@ export default function Cron ({ selected, taskOver, stop } : Props ) {
         }
     },[selected]);
 
-    let timeout: ReturnType<typeof setTimeout> = setTimeout(() => '', 1000);
-
     function regressive(counter: number = 0) {
         setTimeout(() => {
             if(counter >= 0) {
