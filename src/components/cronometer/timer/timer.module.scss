@@ -17,7 +17,32 @@
 
 
 
-@media screen and (max-width: 738px){
+
+@media screen and (max-width: 1560px){
+    .number {
+        font-size: 12em;
+        border-radius: 9px;
+    }
+
+    .points {
+        font-size: 12em;
+    }
+
+}
+
+@media screen and (max-width: 1282px){
+    .number {
+        font-size: 10em;
+        border-radius: 9px;
+    }
+
+    .points {
+        font-size: 10em;
+    }
+
+}
+
+@media screen and (max-width: 1080px){
     .number {
         font-size: 5em;
         border-radius: 9px;
@@ -28,3 +53,5 @@
     }
 
 }
+
+
