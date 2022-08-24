@@ -85,16 +85,6 @@ export default function App() {
 }
 
 
-function ListaDeRepositorios() {
-  useEffect(() => {
-    async function carregaRepositorios () {
-      const resposta = await fetch('https://api.github.com/users/julio-cesar96/repos');
-      const repositorios = await resposta.json();
- return repositorios;
-    }
-    carregaRepositorios();
-  }, [])};
-
 
 
 
