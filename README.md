@@ -1,46 +1,32 @@
-# Getting Started with Create React App
+# A To Do App made with ReactTs
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I made this to learn more react and pratice my english.
+Im actually deploying, but still have work to do, im gonna paste the link here when its functionaly.
+For now, insert `npm start` on terminal to run the app.
 
-## Available Scripts
+beta: [https://masterkelwin.github.io/K-Timer/](https://masterkelwin.github.io/K-Timer/)
 
-In the project directory, you can run:
+## About
 
-### `npm start`
+Im a front-end developer studying React and Java, i made this app to learn more SCSS, CSS Modules, responsive, function components, typescript and hooks. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+And here we have an app who captures user inputs and make a object, this object goes to other components to make different things around all the application. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Functionalities
 
-### `npm test`
+1- Render components passing props around all the application without using global scope.
+2- An interface made for the main object, the task.
+3- useState for save an array of tasks and render in DOM (keys used with ID).
+4- useEffect to watch the state of selected, if changed other value gonna be input on cronometer.
+5- Responsive on all devices, even after deploy.
+6- Leaving few responsabilities as possible in the components, except in the main app because I choose to not use global scope.
+7- Some simples animations for make the app more cool.
+8- A list who shows all the complete tasks.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### Dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1-Typescript
+2-UUIDv4
+3-SCSS
+4-CSS Modules

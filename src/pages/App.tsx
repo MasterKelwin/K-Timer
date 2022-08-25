@@ -19,7 +19,6 @@ export default function App() {
             ...task,
             selected: task.id === taskSelected.id ? true : false
         })))
-      //ATT CRON
       }
 
       console.log(taskSelected);
@@ -57,26 +56,14 @@ export default function App() {
       }
     }
 
-    function stop() {
-      if(selected) {
-        setTasks(oldTasks => oldTasks.map(task => {
-          if(task.id === selected.id) {
-            return {
-              ...task,
-              selected: false
-            }
-          }
-          return task;
-        }));
-        setSelected(undefined);
-      }
-    } 
+  
+
     
   return (
     <main className={style.app}>
       <div className={style.tasks}>
         <Form setTasks={setTasks}/>
-        <Cron selected={selected} taskOver={taskOver} stop={stop}/>
+        <Cron selected={selected} taskOver={taskOver} />
         <CompletedTasks complets={complets}/>
       </div>
       <List tasks={tasks} select={select}/>

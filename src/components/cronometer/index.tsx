@@ -8,11 +8,10 @@ import Button from '../button'
 
 interface Props {
     selected: ITask | undefined,
-    taskOver: () => void,
-    stop: () => void
+    taskOver: () => void
   }
   
-export default function Cron ({ selected, taskOver, stop } : Props ) {
+export default function Cron ({ selected, taskOver } : Props ) {
     const [time, setTime] = useState<number>();
     useEffect(() => {
         if(selected?.time) {

@@ -15,13 +15,7 @@ export default function Form ({setTasks}: Props) {
     function addTask(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
         setTasks(oldProps => 
-        [...oldProps,
-            {task,
-            time,
-            completed: false,
-            selected: false,
-            removed: false,
-            id: uuidv4()
+        [...oldProps, {task, time, completed: false, selected: false, removed: false,id: uuidv4()
            }
         ]);
 
