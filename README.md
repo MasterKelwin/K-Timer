@@ -8,7 +8,7 @@ beta: [https://masterkelwin.github.io/K-Timer/](https://masterkelwin.github.io/K
 
 ## About
 
-Im a front-end developer studying React and Java, i made this app to learn more SCSS, CSS Modules, responsive, function components, typescript and hooks. 
+Im a front-end developer studying React and Java, i made this app pratice SCSS, CSS Modules, responsive, function components, typescript and hooks. 
 
 And here we have an app who captures user inputs and make a object, this object goes to other components to make different things around all the application. 
 
