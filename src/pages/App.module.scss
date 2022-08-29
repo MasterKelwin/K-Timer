@@ -15,13 +15,12 @@
 @media screen and (max-width: 738px){
     .app {
         flex-direction: column-reverse;
-        height: 96vh;
+        height: auto;
         margin: 2vh auto;
     }
 
     .tasks {
         width: 100%;
-        height: 75%;
     }
 }
 
